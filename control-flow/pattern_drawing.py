@@ -1,11 +1,7 @@
 # pattern_drawing.py
 
-# Prompt user for pattern size (exact text)
-try:
-    size = int(input("Enter the size of the pattern:").strip())
-except ValueError:
-    print("Invalid input! Please enter an integer.")
-    exit()
+# Prompt user for pattern size (exact prompt text)
+size = int(input("Enter the size of the pattern:"))
 
 # Initialize row counter
 i = 1
@@ -17,5 +13,5 @@ while i <= size:
     while j <= i:
         print("*", end=" ")
         j += 1
-    print()  # Move to the next line after each row
+    print()  # Move to next line
     i += 1
