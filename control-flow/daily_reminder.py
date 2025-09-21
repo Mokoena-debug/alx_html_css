@@ -2,10 +2,10 @@
 
 # Prompt user for task details (exact prompts)
 task = input("Enter your task:")
-priority = input("Priority (high/medium/low):").strip().lower()
-time_bound = input("Is it time-bound? (yes/no):").strip().lower()
+priority = input("Priority (high/medium/low):")
+time_bound = input("Is it time-bound? (yes/no):")
 
-# Process task based on priority
+# Use match-case to decide message
 match priority:
     case "high":
         message = f"Reminder: '{task}' is a high priority task"
@@ -16,11 +16,11 @@ match priority:
     case _:
         message = f"Reminder: '{task}' has an unspecified priority"
 
-# Modify message if task is time-bound
+# Append time-bound info in the same f-string format
 if time_bound == "yes":
     message += " that requires immediate attention today!"
 else:
     message += ". Consider completing it when you have free time."
 
-# Print the customized reminder
-print(message)
+# Print the final message exactly using a single f-string
+print(f"{message}")
