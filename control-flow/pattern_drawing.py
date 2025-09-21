@@ -1,8 +1,8 @@
 # pattern_drawing.py
 
-# Prompt user for number of rows
+# Prompt user for pattern size (exact text)
 try:
-    rows = int(input("Enter the number of rows for the pattern: ").strip())
+    size = int(input("Enter the size of the pattern:").strip())
 except ValueError:
     print("Invalid input! Please enter an integer.")
     exit()
@@ -11,7 +11,7 @@ except ValueError:
 i = 1
 
 # Outer loop for each row
-while i <= rows:
+while i <= size:
     # Inner loop for printing stars in each row
     j = 1
     while j <= i:
