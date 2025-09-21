@@ -1,4 +1,5 @@
 # multiplication_table.py
+# multiplication_table.py
 
 # Prompt user for a number
 try:
@@ -10,4 +11,4 @@ except ValueError:
 # Generate and print multiplication table using a for loop
 for i in range(1, 11):
     product = number * i
-    print(f"{num
+    print(f"{number} * {i} = {product}")
